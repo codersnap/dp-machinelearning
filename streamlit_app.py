@@ -10,7 +10,7 @@ with st.expander('Data'):
   df
   
   st.write('**X**')
-  x =df.drop('species',axis=1)
+  x = df.drop('species',axis=1)
   x
   
   st.write('**y**')
@@ -18,4 +18,4 @@ with st.expander('Data'):
   y
   
 with st.expander('**Data visualisation**'):
-  st.scatter_chart(data=df,x='bill_lenght_mm',y='body_mass_g',color='species')
+  st.scatter_chart(data=df,x='bill_length_mm',y='body_mass_g',color='species')
