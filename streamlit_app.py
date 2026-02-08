@@ -86,7 +86,7 @@ clf.fit(x,y)
 
 ##Apply model to amke predictions
 prediction =clf.predict(input_row)
-predicton_proba=clf.predict_proba(input_row)
+prediction_proba=clf.predict_proba(input_row)
 prediction_proba
 
         
