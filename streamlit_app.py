@@ -52,7 +52,7 @@ input_row=df_penguins[:1]
 #Encode y
 target_mapper={
     'Adelie':0,
-    'chinstrap':1,
+    'Chinstrap':1,
     'Gentoo':2
 }
 def target_encode(val):
