@@ -43,6 +43,12 @@ with st.sidebar:
          }
     input_df=pd.DataFrame(data,index=[0])
     input_penguins=pd.concat([input_df,x_raw],axis=0)
+    
+with st.expander('Input Features'):
+    st.write('**Input penguin**')
+    input_df
+    st.write('**Combined penguins Data**')
+    input_penguins
 
 #Encode x
 encode =['island','sex']
@@ -64,13 +70,12 @@ y_raw
 
 
 
-with st.expander('Input Features'):
-    st.write('**Input penguin**')
-    input_df
-    st.write('**Combined penguins Data**')
-    input_penguins
-    st.write('Encoded input penguin')
+with st.expander('Data preparation'):
+    st.write('**Encoded x (input penguin)**')
     input_row
+    st.write('**Encoded y**')
+    y
+    
 
 
 
