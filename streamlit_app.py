@@ -5,12 +5,12 @@ st.title('🤖 machine learning APP')
 
 st.info('This is app builds a machine learning model')
 
-with st.expand('Data'):
+with st.expander('Data'):
     st.write('**Raw Data**')
     df=pd.read_csv('https://raw.githubusercontent.com/dataprofessor/data/master/penguins_cleaned.csv')
     df
 
-    st.writez('**x**')
+    st.write('**x**')
     x=df.drop('species',axis=1)
     x
 
@@ -19,7 +19,7 @@ with st.expand('Data'):
     y=df.species
     y
 
-with st.expand('Data visualtion'):
+with st.expander('Data visualtion'):
 
     st.scatter_chart(data=df,x='bill_length_mm',y='body_mass_g',color='species')
 
