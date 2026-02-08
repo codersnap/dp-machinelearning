@@ -54,6 +54,8 @@ with st.expander('Input Features'):
 #Encode x
 encode =['island','sex']
 df_penguins =pd.get_dummies(input_penguins,prefix=encode)
+
+x=df_penguins[1:]
 input_row=df_penguins[:1]
 
 #Encode y
@@ -80,7 +82,7 @@ with st.expander('Data preparation'):
 #model training and inference
 ##Train the ml model
 clf= RandomForestClassifier()
-clf.fit(x_ray,y)
+clf.fit(x,y)
 
 ##Apply model to amke predictions
 prediction =clf.predict(input_row)
