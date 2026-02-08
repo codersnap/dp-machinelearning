@@ -55,10 +55,10 @@ target_mapper={
     'chinstrap':1,
     'Gentoo':2
 }
-def target_encoded(val):
+def target_encode(val):
     return target_mapper[val]
 
-y=y_raw.apply(target_encoded)
+y=y_raw.apply(target_encode)
 y
 
 
