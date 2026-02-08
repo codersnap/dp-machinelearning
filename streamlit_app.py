@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.tittle('🤖 machine learning APP')
+st.title('🤖 machine learning APP')
 
 st.info('This is app builds a machine learning model')
 
