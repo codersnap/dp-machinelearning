@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+from sklearn.ensemble import RandomForestClassifier
 
 st.title('🤖 machine learning APP')
 
@@ -76,7 +77,14 @@ with st.expander('Data preparation'):
     y
     
 
+#model training and inference
+##Train the ml model
+clf= RandomForestClassifier()
+clf.fit(x_ray,y)
 
-
+##Apply model to amke predictions
+prediction =clf.predict(input_row)
+prediciton_proba=clf.predict_proba(input_row)
+prediction_proba
 
         
