@@ -26,7 +26,7 @@ with st.expander('Data visualtion'):
 with st.sidebar:
     st.header('Input feature')
     island=st.selectbox('Island',('Biscoe','Dream','Torgerson'))
-    gender=st.selectbox('Gender',('male','female'))
+    sex=st.selectbox('Gender',('male','female'))
     bill_length_mm=st.slider('Bill length (mm)',32.1,59.6,43.9)
     bill_depth_mm=st.slider('Bill depth (mm)',13.1,21.5,17.2)
     flipper_length_mm=st.slider('Fipper length (mm)',172.0,231.0,201.0)
@@ -51,7 +51,9 @@ with st.expander('Input Features'):
     st.write('**Combined penguins Data**')
     input_penguins
 
-    
+encode =['island','sex']
+df_penguins =pd.get_dummies(input_peguins,prefix=encode)
+df_penguins[:1]
     
 
 
